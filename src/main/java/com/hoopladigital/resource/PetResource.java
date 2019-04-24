@@ -49,10 +49,10 @@ public class PetResource {
 
 		// Build Response
 		return Response.ok()
-				.entity(PersonPetResponse.builder()
-							.withPerson(person)
-							.withPets(pets).build())
-				.build();
+			.entity(PersonPetResponse.builder()
+				.withPerson(person)
+				.withPets(pets).build())
+			.build();
 	}
 
 	@GET
@@ -74,10 +74,10 @@ public class PetResource {
 
 		// Build Response
 		return Response.ok()
-				.entity(PersonPetResponse.builder()
-							.withPerson(person)
-							.withPets(Collections.singletonList(pet)).build())
-				.build();
+			.entity(PersonPetResponse.builder()
+				.withPerson(person)
+				.withPets(Collections.singletonList(pet)).build())
+			.build();
 
 	}
 
@@ -102,10 +102,10 @@ public class PetResource {
 
 		// Build Response
 		return Response.status(Response.Status.CREATED)
-				.entity(PersonPetResponse.builder()
-							.withPerson(person)
-							.withPets(Collections.singletonList(pet)).build())
-				.build();
+			.entity(PersonPetResponse.builder()
+				.withPerson(person)
+				.withPets(Collections.singletonList(pet)).build())
+			.build();
 
 	}
 

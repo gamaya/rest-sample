@@ -56,9 +56,9 @@ public class PersonResource {
 
 		// Return New Entity
 		return Response
-				.status(Response.Status.CREATED)
-				.entity(person)
-				.build();
+			.status(Response.Status.CREATED)
+			.entity(person)
+			.build();
 
 	}
 
