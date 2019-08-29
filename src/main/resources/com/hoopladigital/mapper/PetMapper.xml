@@ -1,0 +1,54 @@
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hoopladigital.mapper.PetMapper">
+
+	<sql id="petColumns">
+		id,
+		personId,
+		name
+	</sql>
+
+	<select id="getPetList" resultType="Pet">
+		select
+			<include refid="petColumns" />
+		from Pet
+		where personId = #{personId}
+		order by id
+	</select>
+
+	<select id="getPet" resultType="Pet">
+		select
+			<include refid="petColumns" />
+		from Pet
+		where personId = #{personId}
+		  and id = #{id}
+	</select>
+
+	<insert id="insertPet" parameterType="Pet" keyProperty="id" useGeneratedKeys="true">
+		insert into Pet ( personId, name )
+		values ( #{personId}, #{name} )
+	</insert>
+
+	<update id="updatePet" parameterType="Pet">
+		update Pet
+		set name = #{name}
+		where id = #{id}
+		  and personId = #{personId}
+	</update>
+
+	<delete id="deletePet" parameterType="map">
+		delete from Pet
+		where id = #{id}
+		  and personId = #{personId}
+	</delete>
+
+	<delete id="deleteAllPets" parameterType="long">
+		delete from Pet
+		where personId = #{personId}
+	</delete>
+
+
+
+</mapper>
