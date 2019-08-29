@@ -19,4 +19,20 @@ public class PersonService {
 		return personMapper.getPersonList();
 	}
 
+	public Person getPerson(final Long id) {
+		return personMapper.getPerson(id);
+	}
+
+	public void addPerson(final Person person) {
+		personMapper.insertPerson(person);
+	}
+
+	public void updatePerson(final Person person) {
+		personMapper.updatePerson(person);
+	}
+
+	public void deletePerson(final Long id) {
+		personMapper.deletePerson(id);
+	}
+
 }
