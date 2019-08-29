@@ -1,0 +1,5 @@
+---
+instanceType: "t3.micro"
+logRetention: "30"
+deleteLogsOnTerminate: "false"
+springProfile: "prod"
