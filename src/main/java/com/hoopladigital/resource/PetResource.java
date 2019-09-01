@@ -38,7 +38,7 @@ public class PetResource {
 	@Produces("application/json")
 	public Response getPets(@PathParam("personId") final Long personId) {
 
-		// Get Person
+		// Get Person - A small change
 		final Person person = personService.getPerson(personId);
 		if (person == null) {
 			return Response.status(Response.Status.NOT_FOUND).build();
