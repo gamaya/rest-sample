@@ -1,6 +1,6 @@
 ---
 appName: "rest-sample"
-appVersion: "1.0.0"
 description: "Rest Sample Application"
 proxyServer: "apache"
+solutionStackName: "64bit Amazon Linux 2017.09 v2.7.7 running Tomcat 8 Java 8"
 
