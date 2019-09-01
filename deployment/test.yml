@@ -1,5 +1,5 @@
 ---
-instanceType: "t3.micro"
+instanceType: "t2.medium"
 logRetention: "14"
 deleteLogsOnTerminate: "true"
 springProfile: "test"
