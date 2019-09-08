@@ -2,5 +2,6 @@
 instanceType: "t2.medium"
 logRetention: "30"
 deleteLogsOnTerminate: "false"
+recordName: "rest-sample-prod"
 springProfile: "prod"
 subnets: "subnet-ea61b69c"
