@@ -104,6 +104,7 @@ public class PersonMapperTest extends AbstractMapperTest {
 		assertNull(person);
 		assertEquals(9, peopleList.size());
 
+		fail("Making a test fail.");
 
 	}
 
